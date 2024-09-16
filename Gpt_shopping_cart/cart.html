@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./cart.css">
+</head>
+<body>
+    <div id="cart">
+        <div class="item" data-id="1">
+            <div class="item-details">
+                <span class="item-name">Item 1</span>
+                <span class="item-price" data-price="10">$10</span>
+            </div>
+            <div class="item-actions">
+                <button class="decrease">-</button>
+                <span class="item-quantity">1</span>
+                <button class="increase">+</button>
+                <button class="delete">Delete</button>
+                <button class="like">&#9825;</button>
+            </div>
+        </div>
+        <!-- Repeat for more items -->
+        <div id="total">Total: $10</div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>

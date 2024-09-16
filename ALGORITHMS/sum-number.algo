@@ -1,0 +1,12 @@
+ALGORITHM SUM_NUMBERS
+VAR
+    a,b,c:INTEGER
+    sum:INTEGER:=0
+    set_declarations
+BEGIN
+    Read(a)
+    Read(b)
+    Read(c)
+    sum := a+b+c
+    Write(sum) 
+END                               

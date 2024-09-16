@@ -1,0 +1,65 @@
+/* Element selectors */
+p {
+  color: #5c124f;
+  font-size: 30px;
+}
+a {
+  text-decoration: none;
+}
+
+/*  calss selector */
+.heading-one {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.heading-two {
+  font-weight: 100;
+}
+/* id selector */
+#heading_three {
+  color: aqua;
+}
+.sign-up {
+  background-color: purple;
+  color: white;
+}
+/* pseudo selectors */
+.sign-up:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.about:active {
+  color: blue;
+}
+
+.heading-five:hover {
+  cursor: pointer;
+  color: aqua;
+}
+.box-model {
+  background-color: #611f69;
+  /* padding-top: 50px; */
+  width: 400px;
+  height: 300px;
+  margin-bottom: 40px;
+}
+
+.box-model-paragraph {
+  color: #ffffff;
+}
+.box-model-2 {
+  background-color: aqua;
+  width: 400px;
+  height: 300px;
+  margin-bottom: 50px;
+}
+
+.box-model-3 {
+  background-color: darkkhaki;
+  height: 100px;
+  width: 200px;
+  margin-top: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
