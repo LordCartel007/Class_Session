@@ -1,0 +1,22 @@
+.nav-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+}
+
+.btn {
+  border-radius: 5px;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}

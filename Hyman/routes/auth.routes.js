@@ -1,7 +1,8 @@
 import { Router } from "express";
-import { createUser } from "../controllers/auth.controller.js";
+import { createUser } from "../controller/auth.controllers.js";
 const router = Router();
 
-router.post("/create-user");
+// create user is a function that is     called when a post request is made to the /create-user endpoint
+router.post("/create-user", createUser);
 
 export default router;
