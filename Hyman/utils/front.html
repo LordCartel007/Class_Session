@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+    <style>
+      /* Add some basic styles */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User List</h1>
+
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Users will be listed here -->
+      </tbody>
+    </table>
+
+    <script>
+      // Function to fetch and display users from the backend
+      async function fetchUsers() {
+        try {
+          const response = await fetch("http://localhost:3000/api/users"); // Call the backend API
+          if (response.ok) {
+            const users = await response.json(); // Parse the JSON response
+            const tableBody = document.querySelector("#usersTable tbody");
+            tableBody.innerHTML = ""; // Clear the table before adding data
+
+            // Loop through the users and add them to the table
+            users.forEach((user) => {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+                            <td>${user.fullName}</td>
+                            <td>${user.email}</td>
+                            <td>${new Date(
+                              user.createdAt
+                            ).toLocaleDateString()}</td>
+                        `;
+              tableBody.appendChild(row);
+            });
+          } else {
+            console.error("Failed to fetch users");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+
+      // Call the fetchUsers function when the page loads
+      window.onload = fetchUsers;
+    </script>
+  </body>
+</html>
